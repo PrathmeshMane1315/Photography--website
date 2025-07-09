@@ -1,0 +1,142 @@
+body{background-color: #2222;}
+.main{min-height: 500px;margin-top: 5%;}
+
+ul{
+    float: right;
+    list-style-type:none;
+    animation: movedown 2s linear 1;
+    animation-delay: 3s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+     
+}
+@keyframes movedown{
+    0%{
+        transform: translateY(-100px);
+         visibility: visible;
+    }
+    100%{
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+ul li{
+    
+}
+
+ul li a{
+    text-decoration:none;
+    color:#0f0f0f;
+    padding: 5px 20px;
+    border: 1px solid #fff;
+    transition:0.6s ease;
+    width:100%; height:10vh;
+     
+     
+
+}
+
+ul li a:hover{
+    background-color: #4A37A2;
+    color: #fff;
+      text-decoration:none;
+}
+
+.serviceBox{
+    color: #606060;
+    background: linear-gradient(-45deg,#B32587,#EF539C);
+    font-family: 'Cabin', sans-serif;
+    text-align: center;
+    padding:70px 20px 30px;
+    border-radius: 70px 0;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+    animation: zoomin 1s linear 1;
+    animation-delay: 3s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+     
+}
+@keyframes zoomin{
+    0%{
+        transform: scale(0.5);
+        visibility: visible;
+    }
+    100%{
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+.serviceBox:hover{ box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.2); }
+.serviceBox:before{
+    content: '';
+    background: linear-gradient(45deg,#fff,#fff,#fff,#fff,transparent);
+    border-radius: 63px 80px 63px 0;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    top: 8px;
+    bottom: 8px;
+    z-index: -1;
+}
+.serviceBox .service-icon{
+    color: #fff;
+    background: linear-gradient(-45deg,#B32587,#EF539C);
+    font-size: 45px;
+    line-height: 100px;
+    width: 160px;
+    height: 100px;
+    margin: 0 0 25px -20px;
+    border-left: none;
+    border-radius: 0 50px 50px 0;
+    position: relative;
+    z-index: 1;
+}
+.serviceBox:hover .service-icon i{
+    transform: rotateY(360deg);
+    transition: all 0.3s;
+}
+.serviceBox .service-icon:before{
+    content: "";
+    border: 7px solid #fff;
+    border-left: none;
+    border-radius: 0 50px 50px 0;
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 0;
+    right: 8px;
+    z-index: -1;
+}
+.serviceBox .title{
+    color: #B32587;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+.serviceBox .description{
+    font-size: 15px;
+    line-height: 24px;
+    margin: 0;
+}
+.serviceBox.blue,
+.serviceBox.blue .service-icon{
+    background: linear-gradient(-45deg,#4A37A2,#6B5DBE);
+}
+.serviceBox.blue .title{ color: #4A37A2; }
+.serviceBox.green,
+.serviceBox.green .service-icon{
+    background: linear-gradient(-45deg,#019E4D,#73BA44);
+}
+.serviceBox.green .title{ color: #019E4D; }
+.serviceBox.orange,
+.serviceBox.orange .service-icon{
+    background: linear-gradient(-45deg,#FB6801,#FE8C05);
+}
+.serviceBox.orange .title{ color: #FB6801; }
+@media only screen and (max-width:990px){
+    .serviceBox{ margin: 0 0 30px; }
+}

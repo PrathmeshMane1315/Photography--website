@@ -1,0 +1,36 @@
+<html>
+<head>
+   <title>image Gallery</title>
+   <link rel="Stylesheet" type="text/css" href="Css/Stylesheet.css">
+    
+</head>
+<body>
+    <div class="full-img" id="fullImgBox">
+        <img src="Images/Devil 1.jpg" id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+    </div>
+    <div class="img-gallery">
+    <img src="Images/Devil 1.jpg" onclick="openFullImg(this.src)">
+    <img src="Images/Devil 2.jpg" onclick="openFullImg(this.src)">
+    <img src="Images/Devil 3.jpg" onclick="openFullImg(this.src)">
+    <img src="Images/Devil 4.jpg" onclick="openFullImg(this.src)">
+    <!-- <img src="Images/Devil 5.jpg" onclick="openFullImg(this.src)"> -->
+    <!-- <img src="Images/Devil 6.jpg" onclick="openFullImg(this.src)"> -->
+    </div>
+    
+<script>
+    
+    var fullImgBox = document.getElementById("fullImgBox");
+    var fullImg = document.getElementById("fullImg");
+    
+    function openFullImg(pic)
+    {
+        fullImgBox.style.display="flex";
+        fullImg.src = pic;
+    }
+    function closeFullImg(){
+        fullImgBox.style.display="none";
+    }
+</script> 
+</body>
+</html>
